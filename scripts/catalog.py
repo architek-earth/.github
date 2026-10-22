@@ -32,10 +32,18 @@ CLUSTERS: dict[str, list[str]] = {
 }
 
 
+def deprecated(slug: str) -> bool:
+    """Deprecated actors stay on Apify for existing users but leave the catalog (public actor API flag)."""
+    req = urllib.request.Request(f"https://api.apify.com/v2/acts/architekture~{slug}", headers={"Accept": "application/json"})
+    with urllib.request.urlopen(req, timeout=60) as r:
+        return bool(json.load(r)["data"].get("isDeprecated"))
+
+
 def fetch() -> list[dict]:
     req = urllib.request.Request(STORE, headers={"Accept": "application/json"})
     with urllib.request.urlopen(req, timeout=60) as r:
-        return json.load(r)["data"]["items"]
+        items = json.load(r)["data"]["items"]
+    return [a for a in items if not a.get("isDeprecated") and not deprecated(a["name"])]
 
 
 def name(a: dict) -> str:
