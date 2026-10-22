@@ -2,6 +2,8 @@
 
 architek.earth — an independent data studio. Pay-per-result scrapers with recorded runs, published canaries and stable schemas, built for people and AI agents.
 
+**Code like concrete.**
+
 All actors run on [Apify](https://apify.com/architekture). Copy-paste code for every one of them, in Python, Node, curl and n8n, is in [**examples**](https://github.com/architek-earth/examples).
 
 ### The promise
