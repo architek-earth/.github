@@ -17,7 +17,7 @@ All actors run on [Apify](https://apify.com/architekture). Copy-paste code for e
 ## Catalog
 
 <!-- catalog:start -->
-**26 live actors.** Prices are per delivered result; status rows are free.
+**27 live actors.** Prices are per delivered result; status rows are free.
 
 ### Grocery and retail prices
 
@@ -40,33 +40,33 @@ All actors run on [Apify](https://apify.com/architekture). Copy-paste code for e
 | Actor | What you get | Price |
 |---|---|---|
 | [Shopify Scraper](https://apify.com/architekture/shopify-products-scraper) | Shopify store scraper for any public Shopify storefront, worldwide: products, variant prices, compare-at (sale) prices, SKUs,… | $0.50 / 1,000 · Product |
-| [TikTok Shop Scraper](https://apify.com/architekture/tiktok-shop-products-scraper) | Collect public US TikTok Shop products, prices, sellers, ratings and variants. | $3.00 / 1,000 · Product |
+| [TikTok Shop Scraper](https://apify.com/architekture/tiktok-shop-products-scraper) | TikTok Shop US (shop.tiktok.com) products by keyword search: price, currency, seller ID and name, rating, review count, sold count and… | $3.00 / 1,000 · Product |
 | [AliExpress Scraper](https://apify.com/architekture/aliexpress-search-scraper) | AliExpress global product search from aliexpress.com by keyword: sale price, original price, discount, currency, order count, rating,… | $2.50 / 1,000 · Product |
 
 ### Jobs, companies and people
 
 | Actor | What you get | Price |
 |---|---|---|
-| [Indeed Scraper](https://apify.com/architekture/indeed-scraper) | Search US Indeed jobs by keyword and location. | $3.50 / 1,000 · Job |
-| [LinkedIn Jobs Scraper](https://apify.com/architekture/linkedin-jobs-monitor) | Public LinkedIn jobs with descriptions, salary evidence and saved continuation. | $4.00 / 1,000 · Delivered job |
+| [Indeed Scraper](https://apify.com/architekture/indeed-scraper) | Indeed US jobs from indeed.com: job title, company, location, full description, salary range and period, job type, remote or hybrid… | $3.50 / 1,000 · Job |
+| [LinkedIn Jobs Scraper](https://apify.com/architekture/linkedin-jobs-monitor) | LinkedIn jobs (linkedin.com) public job search: title, company, location, posted date, description, salary with evidence, seniority,… | $4.00 / 1,000 · Delivered job |
 | [Y Combinator Scraper](https://apify.com/architekture/yc-companies-scraper) | Y Combinator startup directory data from ycombinator.com: company name, batch, status, stage, industry, region, tags, team size,… | $2.00 / 1,000 · Company |
 
 ### Video, social and newsletters
 
 | Actor | What you get | Price |
 |---|---|---|
-| [YouTube Transcript Scraper](https://apify.com/architekture/youtube-transcript-scraper) | YouTube transcript API for captions, subtitles and translations. | $4.00 / 1,000 · Transcript |
-| [YouTube & TikTok Transcript Scraper](https://apify.com/architekture/unified-transcript-api) | Extract YouTube and TikTok transcripts, captions and subtitles in mixed URL batches. | $1.00 / 1,000 · Transcript |
-| [Threads Replies Scraper](https://apify.com/architekture/threads-replies-scraper) | Export accessible replies to public Threads posts without logging in: text, authors, likes and nesting, plus root posts. | $2.50 / 1,000 · Reply |
+| [YouTube Transcript Scraper](https://apify.com/architekture/youtube-transcript-scraper) | YouTube transcripts, worldwide, from youtube.com: transcript text, timestamped segments, caption language, auto-generated flag,… | $4.00 / 1,000 · Transcript |
+| [Unified Video Transcript API](https://apify.com/architekture/unified-transcript-api) | YouTube and TikTok video transcripts from youtube.com and tiktok.com in one JSON schema: transcript text, language, title, author,… | $1.00 / 1,000 · Transcript |
+| [Threads Replies Scraper](https://apify.com/architekture/threads-replies-scraper) | Threads replies scraper, global, threads.com: reply and comment rows with author handle, name and verified badge, text, like, reply,… | $2.50 / 1,000 · Reply |
 | [Substack Scraper](https://apify.com/architekture/substack-scraper) | Substack newsletter scraper (substack.com and custom domains): posts, authors, likes, comment counts, restacks, word counts, tags,… | $1.00 / 1,000 · Post |
-| [Facebook Ad Library Scraper](https://apify.com/architekture/ad-intelligence-watchlist) | Track new and changed Facebook and Instagram ads from Meta Ad Library by advertiser and country. | $1.50 / 1,000 · New or changed ad |
+| [Ad Intelligence Watchlist](https://apify.com/architekture/ad-intelligence-watchlist) | Meta Ad Library, any country (facebook.com/ads/library): new and changed Facebook and Instagram ads per advertiser since the last run:… | $1.50 / 1,000 · New or changed ad |
 
 ### Search, travel and trends
 
 | Actor | What you get | Price |
 |---|---|---|
 | [Google Trends Scraper](https://apify.com/architekture/google-trends-scraper) | Google Trends Trending Now searches by country from trends.google.com: title, approximate traffic, start time, active flag and related… | $1.00 / 1,000 · Delivered Trending Now row |
-| [Google Hotels Scraper](https://apify.com/architekture/google-hotels-scraper) | Extract Google Hotels properties, dated prices, ratings and amenities. | $4.00 / 1,000 · Hotel property |
+| [Google Hotels Scraper](https://apify.com/architekture/google-hotels-scraper) | Google Hotels (google.com/travel/hotels) scraper: nightly prices, stay totals, currency, guest ratings, review counts, star class,… | $4.00 / 1,000 · Hotel property |
 
 ### Sports
 
@@ -78,10 +78,26 @@ All actors run on [Apify](https://apify.com/architekture). Copy-paste code for e
 
 | Actor | What you get | Price |
 |---|---|---|
-| [EU E-Invoice Parser](https://apify.com/architekture/docparser-invoice-json) | Parse EU e-invoices to JSON: XRechnung, ZUGFeRD, Factur-X and PEPPOL UBL, as XML or PDFs containing invoice XML. | $2.00 / 1,000 · E-invoice |
+| [EU E-Invoice Parser](https://apify.com/architekture/docparser-invoice-json) | EU e-invoices (XRechnung, ZUGFeRD, Factur-X, PEPPOL UBL) to JSON: invoice number, dates, seller and buyer VAT IDs, IBAN, net, tax and… | $2.00 / 1,000 · E-invoice |
+
+### More
+
+| Actor | What you get | Price |
+|---|---|---|
+| [Google Shopping Scraper](https://apify.com/architekture/google-shopping-scraper) | Google Shopping scraper by keyword and country: title, price, sale price, merchant, rating, shipping and image per product; offers mode… | $3.00 / 1,000 · Delivered product |
 <!-- catalog:end -->
 
 <sub>Generated weekly from the public Apify Store listings.</sub>
+
+## Recent updates
+
+<!-- releases:start -->
+2026-10-24 · [Pak'nSave Scraper](https://apify.com/architekture/paknsave-nz-scraper) · 0.0.32 · A run stopped as `BLOCKED` now saves the site's last response (redacted) in the run's key-value store, so the cause can be checked; pricing, input and output are unchanged.
+
+2026-10-24 · [Tesco UK Scraper](https://apify.com/architekture/tesco-uk-scraper) · 1.0.22 · A failed proxy connection is now retried on a fresh proxy session before the run stops; pricing, input and output are unchanged.
+
+2026-10-24 · [Google Trends Scraper](https://apify.com/architekture/google-trends-scraper) · 0.1.24 · Keyword mode: interest over time, interest by region and related queries for up to 20 keywords (`mode: "keyword"`), at $0.02 per keyword report.
+<!-- releases:end -->
 
 ## Contact
 
