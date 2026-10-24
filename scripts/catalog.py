@@ -1,16 +1,14 @@
 """Regenerate the catalog in profile/README.md from the public Apify Store API.
 
 Only public listing data is used: name, title, description and pricing.
-Also renders "## Recent updates": the newest 10 buyer lines of docs/health/RELEASES.md on architek-earth/apify-actors
-main (one line per release: date · actor · version · what changed). That repo is private, so the file is read through
-the GitHub API with RELEASES_TOKEN (Contents: read) when set, else raw.githubusercontent.com; if neither works the
-section is kept as it is (each actor's promote job also writes it on every release).
-Usage: python scripts/catalog.py   (optional env RELEASES_TOKEN)
+Also renders "## Recent updates": the newest 10 buyer lines of the public release notes (one line per release:
+date · actor · version · what changed). Each actor's promote job PUTs docs/health/RELEASES.md to the public-read Apify
+key-value store record architek-public/RELEASES.md; it is read here without auth. If the fetch fails the section is
+kept as it is.
+Usage: python scripts/catalog.py
 """
 
-import base64
 import json
-import os
 import pathlib
 import re
 import urllib.error
@@ -20,8 +18,9 @@ STORE = "https://api.apify.com/v2/store?username=architekture&limit=200"
 README = pathlib.Path(__file__).resolve().parent.parent / "profile" / "README.md"
 START, END = "<!-- catalog:start -->", "<!-- catalog:end -->"
 R_START, R_END = "<!-- releases:start -->", "<!-- releases:end -->"
-RELEASES_API = "https://api.github.com/repos/architek-earth/apify-actors/contents/docs/health/RELEASES.md?ref=main"
-RELEASES_RAW = "https://raw.githubusercontent.com/architek-earth/apify-actors/main/docs/health/RELEASES.md"
+# Apify key-value store `architek-public` (account architekture), public read by ID: not a secret.
+RELEASES_STORE = "Fra91VmDVJ1lbu8UX"
+RELEASES_URL = f"https://api.apify.com/v2/key-value-stores/{RELEASES_STORE}/records/RELEASES.md"
 RECENT = 10
 # Same shape as PUBLIC_LINE_RE in ops/setup/promote.py (architek-earth/apify-actors).
 RELEASE_LINE = re.compile(r"^\d{4}-\d{2}-\d{2} · \[[^\]]+\]\(https://apify\.com/architekture/[a-z0-9-]+\) · \d+\.\d+\.\d+ · \S.*$")
@@ -105,16 +104,11 @@ def render(items: list[dict]) -> str:
 
 
 def releases_text() -> str | None:
-    """RELEASES.md from apify-actors main, or None when it cannot be read (private repo and no token)."""
-    token = os.environ.get("RELEASES_TOKEN", "")
+    """The public RELEASES.md record (no auth), or None when it cannot be read."""
     try:
-        if token:
-            headers = {"Authorization": f"Bearer {token}", "Accept": "application/vnd.github+json"}
-            with urllib.request.urlopen(urllib.request.Request(RELEASES_API, headers=headers), timeout=60) as r:
-                return base64.b64decode(json.load(r)["content"]).decode("utf-8")
-        with urllib.request.urlopen(RELEASES_RAW, timeout=60) as r:
+        with urllib.request.urlopen(RELEASES_URL, timeout=60) as r:
             return r.read().decode("utf-8")
-    except (urllib.error.URLError, KeyError, ValueError) as exc:
+    except (urllib.error.URLError, UnicodeDecodeError, OSError) as exc:
         print(f"release notes not readable ({type(exc).__name__}); Recent updates kept as is")
         return None
 
@@ -124,7 +118,7 @@ def recent_lines(text: str) -> list[str]:
 
 
 def with_recent(readme: str, lines: list[str] | None) -> str:
-    """Swap in the Recent updates block (the same block the promote job writes); None keeps the existing one."""
+    """Swap in the Recent updates block; None keeps the existing one."""
     m = re.search(r"## Recent updates\s*\n+" + re.escape(R_START) + r".*?" + re.escape(R_END), readme, flags=re.DOTALL)
     if lines is None and m:
         return readme

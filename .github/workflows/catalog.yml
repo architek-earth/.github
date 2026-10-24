@@ -14,8 +14,6 @@ jobs:
         with:
           python-version: "3.12"
       - run: python scripts/catalog.py
-        env:
-          RELEASES_TOKEN: ${{ secrets.RELEASES_TOKEN }}  # optional: read release notes from the private apify-actors repo
       - name: Commit if changed
         run: |
           git diff --quiet && exit 0
