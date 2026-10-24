@@ -22,6 +22,12 @@ R_START, R_END = "<!-- releases:start -->", "<!-- releases:end -->"
 RELEASES_STORE = "Fra91VmDVJ1lbu8UX"
 RELEASES_URL = f"https://api.apify.com/v2/key-value-stores/{RELEASES_STORE}/records/RELEASES.md"
 RECENT = 10
+MCP_REPO = "https://github.com/architek-earth/mcp"
+AGENTS_BLOCK = (
+    "### For AI agents\n\n"
+    f"Every live actor is a ready-to-paste MCP server entry in [**mcp**]({MCP_REPO}): the Apify MCP server at "
+    "`mcp.apify.com`, scoped to one actor, with your token read from `APIFY_TOKEN`. Regenerated weekly from the catalog below.\n"
+)
 # Same shape as PUBLIC_LINE_RE in ops/setup/promote.py (architek-earth/apify-actors).
 RELEASE_LINE = re.compile(r"^\d{4}-\d{2}-\d{2} · \[[^\]]+\]\(https://apify\.com/architekture/[a-z0-9-]+\) · \d+\.\d+\.\d+ · \S.*$")
 
@@ -132,6 +138,14 @@ def with_recent(readme: str, lines: list[str] | None) -> str:
     return readme[: at + 1] + block + "\n\n" + readme[at + 1 :]
 
 
+def with_agents(readme: str) -> str:
+    """Keep the "For AI agents" link to architek-earth/mcp; re-insert it before "## Catalog" if it was dropped."""
+    if MCP_REPO in readme:
+        return readme
+    at = readme.find("\n## Catalog")
+    return readme if at < 0 else readme[: at + 1] + AGENTS_BLOCK + "\n" + readme[at + 1 :]
+
+
 def main() -> None:
     text = README.read_text(encoding="utf-8")
     head, rest = text.split(START, 1)
@@ -139,6 +153,7 @@ def main() -> None:
     new = f"{head}{START}\n{render(fetch())}\n{END}{tail}"
     source = releases_text()
     new = with_recent(new, recent_lines(source) if source is not None else None)
+    new = with_agents(new)
     if new != text:
         README.write_text(new, encoding="utf-8", newline="\n")
         print("catalog updated")

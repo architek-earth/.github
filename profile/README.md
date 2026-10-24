@@ -14,6 +14,10 @@ All actors run on [Apify](https://apify.com/architekture). Copy-paste code for e
 - **Published canaries.** Scheduled test runs check the actors against the live sites, so breakage is caught early.
 - **Stable schemas.** Output fields are add-only. We never rename or remove a field you depend on.
 
+### For AI agents
+
+Every live actor is a ready-to-paste MCP server entry in [**mcp**](https://github.com/architek-earth/mcp): the Apify MCP server at `mcp.apify.com`, scoped to one actor, with your token read from `APIFY_TOKEN`. Regenerated weekly from the catalog below.
+
 ## Catalog
 
 <!-- catalog:start -->
@@ -87,6 +91,18 @@ All actors run on [Apify](https://apify.com/architekture). Copy-paste code for e
 ## Recent updates
 
 <!-- releases:start -->
+2026-10-24 · [Google Hotels Scraper](https://apify.com/architekture/google-hotels-scraper) · 0.1.15 · README now answers blocked runs, stay dates, per-day calendars, filters and booking links up front; hero line from the 2026-10-24 canary run.
+
+2026-10-24 · [Google Trends Scraper](https://apify.com/architekture/google-trends-scraper) · 0.1.26 · README answers the questions Google Trends users ask most: what happens on a block or page change, what a failed run costs, run times, keyword comparison, region coverage and integrations; the listing title now leads with interest over time, related queries and trending searches.
+
+2026-10-24 · [Dunnes Stores Scraper](https://apify.com/architekture/dunnes-ie-scraper) · 0.0.212 · A search, category or product stopped as `BLOCKED` now saves the site's last response (redacted) in the run's key-value store so the cause can be checked; pricing, input and output are unchanged.
+
+2026-10-24 · [ALDI Ireland Scraper](https://apify.com/architekture/aldi-ie-scraper) · 0.0.215 · A search, category or SKU stopped as `BLOCKED` now saves the site's last response (redacted) in the run's key-value store so the cause can be checked; pricing, input and output are unchanged.
+
+2026-10-24 · [New World NZ Scraper](https://apify.com/architekture/new-world-nz-scraper) · 1.0.17 · A run stopped as `BLOCKED` now saves the site's last response (redacted) in the run's key-value store so the cause can be checked; pricing, input and output are unchanged.
+
+2026-10-24 · [Woolworths NZ Scraper](https://apify.com/architekture/woolworths-nz-scraper) · 0.0.244 · A search or department refused as `BLOCKED` now saves the site's last response (redacted) in the run's key-value store so the cause can be checked; pricing, input and output are unchanged.
+
 2026-10-24 · [Google Trends Scraper](https://apify.com/architekture/google-trends-scraper) · 0.1.25 · Keyword mode: the listing now shows the keyword price as $20.00 / 1,000 keyword reports ($0.02 each) instead of a per-row figure, and explains that rows delivered on a watch rerun are Google Trends churn; price and output unchanged.
 
 2026-10-24 · [Pak'nSave Scraper](https://apify.com/architekture/paknsave-nz-scraper) · 0.0.32 · A run stopped as `BLOCKED` now saves the site's last response (redacted) in the run's key-value store, so the cause can be checked; pricing, input and output are unchanged.
