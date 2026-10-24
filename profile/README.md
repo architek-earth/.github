@@ -65,7 +65,7 @@ All actors run on [Apify](https://apify.com/architekture). Copy-paste code for e
 
 | Actor | What you get | Price |
 |---|---|---|
-| [Google Trends Scraper](https://apify.com/architekture/google-trends-scraper) | Google Trends Trending Now searches by country from trends.google.com: title, approximate traffic, start time, active flag and related… | $1.00 / 1,000 · Delivered Trending Now row |
+| [Google Trends Scraper](https://apify.com/architekture/google-trends-scraper) | Google Trends Trending Now searches by country (title, approximate traffic, start time, related queries) and Explore keyword reports:… | $1.00 / 1,000 · Delivered Trending Now row |
 | [Google Hotels Scraper](https://apify.com/architekture/google-hotels-scraper) | Google Hotels (google.com/travel/hotels) scraper: nightly prices, stay totals, currency, guest ratings, review counts, star class,… | $4.00 / 1,000 · Hotel property |
 | [Google Shopping Scraper](https://apify.com/architekture/google-shopping-scraper) | Google Shopping scraper by keyword and country: title, price, sale price, merchant, rating, shipping and image per product; offers mode… | $3.00 / 1,000 · Delivered product |
 
@@ -87,6 +87,8 @@ All actors run on [Apify](https://apify.com/architekture). Copy-paste code for e
 ## Recent updates
 
 <!-- releases:start -->
+2026-10-24 · [Google Trends Scraper](https://apify.com/architekture/google-trends-scraper) · 0.1.25 · Keyword mode: the listing now shows the keyword price as $20.00 / 1,000 keyword reports ($0.02 each) instead of a per-row figure, and explains that rows delivered on a watch rerun are Google Trends churn; price and output unchanged.
+
 2026-10-24 · [Pak'nSave Scraper](https://apify.com/architekture/paknsave-nz-scraper) · 0.0.32 · A run stopped as `BLOCKED` now saves the site's last response (redacted) in the run's key-value store, so the cause can be checked; pricing, input and output are unchanged.
 
 2026-10-24 · [Tesco UK Scraper](https://apify.com/architekture/tesco-uk-scraper) · 1.0.22 · A failed proxy connection is now retried on a fresh proxy session before the run stops; pricing, input and output are unchanged.
