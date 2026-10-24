@@ -39,7 +39,7 @@ CLUSTERS: dict[str, list[str]] = {
         "youtube-transcript-scraper", "unified-transcript-api", "threads-replies-scraper",
         "substack-scraper", "ad-intelligence-watchlist",
     ],
-    "Search, travel and trends": ["google-trends-scraper", "google-hotels-scraper"],
+    "Search, travel and trends": ["google-trends-scraper", "google-hotels-scraper", "google-shopping-scraper"],
     "Sports": ["tennis-data-scraper"],
     "Documents": ["docparser-invoice-json"],
 }

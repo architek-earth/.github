@@ -67,6 +67,7 @@ All actors run on [Apify](https://apify.com/architekture). Copy-paste code for e
 |---|---|---|
 | [Google Trends Scraper](https://apify.com/architekture/google-trends-scraper) | Google Trends Trending Now searches by country from trends.google.com: title, approximate traffic, start time, active flag and related… | $1.00 / 1,000 · Delivered Trending Now row |
 | [Google Hotels Scraper](https://apify.com/architekture/google-hotels-scraper) | Google Hotels (google.com/travel/hotels) scraper: nightly prices, stay totals, currency, guest ratings, review counts, star class,… | $4.00 / 1,000 · Hotel property |
+| [Google Shopping Scraper](https://apify.com/architekture/google-shopping-scraper) | Google Shopping scraper by keyword and country: title, price, sale price, merchant, rating, shipping and image per product; offers mode… | $3.00 / 1,000 · Delivered product |
 
 ### Sports
 
@@ -79,12 +80,6 @@ All actors run on [Apify](https://apify.com/architekture). Copy-paste code for e
 | Actor | What you get | Price |
 |---|---|---|
 | [EU E-Invoice Parser](https://apify.com/architekture/docparser-invoice-json) | EU e-invoices (XRechnung, ZUGFeRD, Factur-X, PEPPOL UBL) to JSON: invoice number, dates, seller and buyer VAT IDs, IBAN, net, tax and… | $2.00 / 1,000 · E-invoice |
-
-### More
-
-| Actor | What you get | Price |
-|---|---|---|
-| [Google Shopping Scraper](https://apify.com/architekture/google-shopping-scraper) | Google Shopping scraper by keyword and country: title, price, sale price, merchant, rating, shipping and image per product; offers mode… | $3.00 / 1,000 · Delivered product |
 <!-- catalog:end -->
 
 <sub>Generated weekly from the public Apify Store listings.</sub>
