@@ -21,7 +21,7 @@ Every live actor is a ready-to-paste MCP server entry in [**mcp**](https://githu
 ## Catalog
 
 <!-- catalog:start -->
-**27 live actors.** Prices are per delivered result; status rows are free.
+**28 live actors.** Prices are per delivered result; status rows are free.
 
 ### Grocery and retail prices
 
@@ -84,6 +84,12 @@ Every live actor is a ready-to-paste MCP server entry in [**mcp**](https://githu
 | Actor | What you get | Price |
 |---|---|---|
 | [EU E-Invoice Parser](https://apify.com/architekture/docparser-invoice-json) | EU e-invoices (XRechnung, ZUGFeRD, Factur-X, PEPPOL UBL) to JSON: invoice number, dates, seller and buyer VAT IDs, IBAN, net, tax and… | $2.00 / 1,000 · E-invoice |
+
+### More
+
+| Actor | What you get | Price |
+|---|---|---|
+| [Google Jobs Scraper](https://apify.com/architekture/google-jobs-scraper) | Google Jobs scraper for US job searches: title, company, location, salary, posting age, employment type, full description, job… | $3.50 / 1,000 · Delivered job |
 <!-- catalog:end -->
 
 <sub>Generated weekly from the public Apify Store listings.</sub>
@@ -91,25 +97,25 @@ Every live actor is a ready-to-paste MCP server entry in [**mcp**](https://githu
 ## Recent updates
 
 <!-- releases:start -->
+2026-10-24 · [Tennis Scraper](https://apify.com/architekture/tennis-data-scraper) · 0.1.54 · Match rows now carry `resultType` (completed, retired, walkover, cancelled, interrupted) with the source's `resultNote`, the live server and live game score (`liveServer`, `liveGameScore`, null when not live), and each player's ATP or WTA singles `rank` when in the top 100 (schema version 3, add-only).
+
+2026-10-24 · [Tennis Scraper](https://apify.com/architekture/tennis-data-scraper) · 0.1.53 · The $6.00 / 1,000 enriched-match price is live (since 22:37 UTC) and is now the only price the actor accepts; output and other prices unchanged.
+
+2026-10-24 · [Tennis Scraper](https://apify.com/architekture/tennis-data-scraper) · 0.1.51 · Enriched match rows (`match-detail`) now cost $6.00 per 1,000, down from $12.00. Match and ranking rows stay at $2.50 per 1,000.
+
+2026-10-24 · [YouTube Transcript Scraper](https://apify.com/architekture/youtube-transcript-scraper) · 0.0.17 · Price change announced: `transcript` goes from $4.00 to $6.00 per 1,000 transcripts on 2026-11-08 (UTC), after the platform's 14-day notice period; `translated-transcript` stays $10.00 per 1,000.
+
+2026-10-24 · [Tennis Scraper](https://apify.com/architekture/tennis-data-scraper) · 0.1.50 · Match rows now carry `winner`, `endTime`, `surface`, `indoor` and `tournamentUrl`, player objects add `shortName`, `slug` and `photoUrl`, and detail rows add match and per-set durations (schema version 2, add-only).
+
+2026-10-24 · [Tesco UK Scraper](https://apify.com/architekture/tesco-uk-scraper) · 1.0.23 · Studio core 1.0.5: a 403 or 429 from Tesco, or a challenge page, is now retried on a new proxy session with a fresh client (new connection, no cookies), up to two times per page, before the run reports `BLOCKED`.
+
+2026-10-24 · [YouTube Transcript Scraper](https://apify.com/architekture/youtube-transcript-scraper) · 0.0.16 · Listing and README now lead with a recorded 50-video bulk run and the recorded run success rate, and answer empty results, videos without captions and blocked videos up front.
+
 2026-10-24 · [Google Hotels Scraper](https://apify.com/architekture/google-hotels-scraper) · 0.1.15 · README now answers blocked runs, stay dates, per-day calendars, filters and booking links up front; hero line from the 2026-10-24 canary run.
 
 2026-10-24 · [Google Trends Scraper](https://apify.com/architekture/google-trends-scraper) · 0.1.26 · README answers the questions Google Trends users ask most: what happens on a block or page change, what a failed run costs, run times, keyword comparison, region coverage and integrations; the listing title now leads with interest over time, related queries and trending searches.
 
 2026-10-24 · [Dunnes Stores Scraper](https://apify.com/architekture/dunnes-ie-scraper) · 0.0.212 · A search, category or product stopped as `BLOCKED` now saves the site's last response (redacted) in the run's key-value store so the cause can be checked; pricing, input and output are unchanged.
-
-2026-10-24 · [ALDI Ireland Scraper](https://apify.com/architekture/aldi-ie-scraper) · 0.0.215 · A search, category or SKU stopped as `BLOCKED` now saves the site's last response (redacted) in the run's key-value store so the cause can be checked; pricing, input and output are unchanged.
-
-2026-10-24 · [New World NZ Scraper](https://apify.com/architekture/new-world-nz-scraper) · 1.0.17 · A run stopped as `BLOCKED` now saves the site's last response (redacted) in the run's key-value store so the cause can be checked; pricing, input and output are unchanged.
-
-2026-10-24 · [Woolworths NZ Scraper](https://apify.com/architekture/woolworths-nz-scraper) · 0.0.244 · A search or department refused as `BLOCKED` now saves the site's last response (redacted) in the run's key-value store so the cause can be checked; pricing, input and output are unchanged.
-
-2026-10-24 · [Google Trends Scraper](https://apify.com/architekture/google-trends-scraper) · 0.1.25 · Keyword mode: the listing now shows the keyword price as $20.00 / 1,000 keyword reports ($0.02 each) instead of a per-row figure, and explains that rows delivered on a watch rerun are Google Trends churn; price and output unchanged.
-
-2026-10-24 · [Pak'nSave Scraper](https://apify.com/architekture/paknsave-nz-scraper) · 0.0.32 · A run stopped as `BLOCKED` now saves the site's last response (redacted) in the run's key-value store, so the cause can be checked; pricing, input and output are unchanged.
-
-2026-10-24 · [Tesco UK Scraper](https://apify.com/architekture/tesco-uk-scraper) · 1.0.22 · A failed proxy connection is now retried on a fresh proxy session before the run stops; pricing, input and output are unchanged.
-
-2026-10-24 · [Google Trends Scraper](https://apify.com/architekture/google-trends-scraper) · 0.1.24 · Keyword mode: interest over time, interest by region and related queries for up to 20 keywords (`mode: "keyword"`), at $0.02 per keyword report.
 <!-- releases:end -->
 
 ## Contact
