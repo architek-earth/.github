@@ -21,7 +21,7 @@ Every live actor is a ready-to-paste MCP server entry in [**mcp**](https://githu
 ## Catalog
 
 <!-- catalog:start -->
-**28 live actors.** Prices are per delivered result; status rows are free.
+**31 live actors.** Prices are per delivered result; status rows are free.
 
 ### Grocery and retail prices
 
@@ -59,7 +59,7 @@ Every live actor is a ready-to-paste MCP server entry in [**mcp**](https://githu
 
 | Actor | What you get | Price |
 |---|---|---|
-| [YouTube Transcript Scraper](https://apify.com/architekture/youtube-transcript-scraper) | YouTube transcripts, worldwide, from youtube.com: transcript text, timestamped segments, caption language, auto-generated flag,… | $4.00 / 1,000 · Transcript |
+| [YouTube Transcript Scraper](https://apify.com/architekture/youtube-transcript-scraper) | YouTube transcripts in bulk from youtube.com: full text, timestamped caption segments, subtitles in any caption language, auto-generated… | $4.00 / 1,000 · Transcript |
 | [Unified Video Transcript API](https://apify.com/architekture/unified-transcript-api) | YouTube and TikTok video transcripts from youtube.com and tiktok.com in one JSON schema: transcript text, language, title, author,… | $1.00 / 1,000 · Transcript |
 | [Threads Replies Scraper](https://apify.com/architekture/threads-replies-scraper) | Threads replies scraper, global, threads.com: reply and comment rows with author handle, name and verified badge, text, like, reply,… | $2.50 / 1,000 · Reply |
 | [Substack Scraper](https://apify.com/architekture/substack-scraper) | Substack newsletter scraper (substack.com and custom domains): posts, authors, likes, comment counts, restacks, word counts, tags,… | $1.00 / 1,000 · Post |
@@ -69,9 +69,9 @@ Every live actor is a ready-to-paste MCP server entry in [**mcp**](https://githu
 
 | Actor | What you get | Price |
 |---|---|---|
-| [Google Trends Scraper](https://apify.com/architekture/google-trends-scraper) | Google Trends Trending Now searches by country (title, approximate traffic, start time, related queries) and Explore keyword reports:… | $1.00 / 1,000 · Delivered Trending Now row |
-| [Google Hotels Scraper](https://apify.com/architekture/google-hotels-scraper) | Google Hotels (google.com/travel/hotels) scraper: nightly prices, stay totals, currency, guest ratings, review counts, star class,… | $4.00 / 1,000 · Hotel property |
-| [Google Shopping Scraper](https://apify.com/architekture/google-shopping-scraper) | Google Shopping scraper by keyword and country: title, price, sale price, merchant, rating, shipping and image per product; offers mode… | $3.00 / 1,000 · Delivered product |
+| [Google Trends Scraper](https://apify.com/architekture/google-trends-scraper) | Google Trends scraper for interest over time, interest by region and top and rising related queries on up to 20 keywords, plus Trending… | $1.00 / 1,000 · Delivered Trending Now row |
+| [Google Hotels Scraper](https://apify.com/architekture/google-hotels-scraper) | Google Hotels scraper at a launch price: $2.50 per 1,000 properties until 2026-11-24, then $4.00. | $2.50 / 1,000 · Hotel property |
+| [Google Shopping Scraper](https://apify.com/architekture/google-shopping-scraper) | Google Shopping scraper at a launch price: $2.00 per 1,000 products until 2026-11-24, then $3.00. | $2.00 / 1,000 · Delivered product |
 
 ### Sports
 
@@ -89,7 +89,10 @@ Every live actor is a ready-to-paste MCP server entry in [**mcp**](https://githu
 
 | Actor | What you get | Price |
 |---|---|---|
+| [Google Ads Transparency Scraper](https://apify.com/architekture/google-ads-transparency-scraper) | Google Ads Transparency: $2/1K ads and $1.50/1K advertisers until 2026-11-24, then $5/$2.50. | $2.00 / 1,000 · Delivered ad |
 | [Google Jobs Scraper](https://apify.com/architekture/google-jobs-scraper) | Google Jobs scraper for US job searches: title, company, location, salary, posting age, employment type, full description, job… | $3.50 / 1,000 · Delivered job |
+| [Tennis Odds Scraper](https://apify.com/architekture/tennis-odds-scraper) | Tennis odds scraper. | $1.50 / 1,000 · Delivered price row |
+| [Yelp Scraper](https://apify.com/architekture/yelp-scraper) | Yelp scraper at a launch price: $2.50 per 1,000 businesses until 2026-11-24, then $4.00. | $2.50 / 1,000 · Delivered business |
 <!-- catalog:end -->
 
 <sub>Generated weekly from the public Apify Store listings.</sub>
@@ -97,25 +100,25 @@ Every live actor is a ready-to-paste MCP server entry in [**mcp**](https://githu
 ## Recent updates
 
 <!-- releases:start -->
-2026-10-24 · [Tennis Scraper](https://apify.com/architekture/tennis-data-scraper) · 0.1.54 · Match rows now carry `resultType` (completed, retired, walkover, cancelled, interrupted) with the source's `resultNote`, the live server and live game score (`liveServer`, `liveGameScore`, null when not live), and each player's ATP or WTA singles `rank` when in the top 100 (schema version 3, add-only).
+2026-10-25 · [Google Ads Transparency Scraper](https://apify.com/architekture/google-ads-transparency-scraper) · 0.1.3 · Import the published n8n workflow or Make blueprint to collect ads using the three-ad example.
 
-2026-10-24 · [Tennis Scraper](https://apify.com/architekture/tennis-data-scraper) · 0.1.53 · The $6.00 / 1,000 enriched-match price is live (since 22:37 UTC) and is now the only price the actor accepts; output and other prices unchanged.
+2026-10-25 · [Tennis Odds Scraper](https://apify.com/architekture/tennis-odds-scraper) · 0.1.5 · Betfair Exchange rows move to $3.00 per 1,000 to cover UK residential access; Pinnacle and Kambi stay $1.50. Existing $1.50 Betfair pricing applies during any Apify notice period.
 
-2026-10-24 · [Tennis Scraper](https://apify.com/architekture/tennis-data-scraper) · 0.1.51 · Enriched match rows (`match-detail`) now cost $6.00 per 1,000, down from $12.00. Match and ranking rows stay at $2.50 per 1,000.
+2026-10-25 · [Google Trends Scraper](https://apify.com/architekture/google-trends-scraper) · 0.1.29 · Six input recipes, a head-to-head table, n8n and Make imports and MCP setup for Claude and Cursor added to this page; output and prices unchanged.
 
-2026-10-24 · [YouTube Transcript Scraper](https://apify.com/architekture/youtube-transcript-scraper) · 0.0.17 · Price change announced: `transcript` goes from $4.00 to $6.00 per 1,000 transcripts on 2026-11-08 (UTC), after the platform's 14-day notice period; `translated-transcript` stays $10.00 per 1,000.
+2026-10-25 · [Google Shopping Scraper](https://apify.com/architekture/google-shopping-scraper) · 0.1.11 · Launch price: search products $2.00 / 1,000 (was $3.00) until 2026-11-24, then back to $3.00 / 1,000; offers rows unchanged at $12 / 1,000.
 
-2026-10-24 · [Tennis Scraper](https://apify.com/architekture/tennis-data-scraper) · 0.1.50 · Match rows now carry `winner`, `endTime`, `surface`, `indoor` and `tournamentUrl`, player objects add `shortName`, `slug` and `photoUrl`, and detail rows add match and per-set durations (schema version 2, add-only).
+2026-10-25 · [Google Jobs Scraper](https://apify.com/architekture/google-jobs-scraper) · 0.1.5 · Five input recipes, a head-to-head table, n8n and Make imports and MCP setup for Claude and Cursor added to this page; output and prices unchanged.
 
-2026-10-24 · [Tesco UK Scraper](https://apify.com/architekture/tesco-uk-scraper) · 1.0.23 · Studio core 1.0.5: a 403 or 429 from Tesco, or a challenge page, is now retried on a new proxy session with a fresh client (new connection, no cookies), up to two times per page, before the run reports `BLOCKED`.
+2026-10-25 · [YouTube Transcript Scraper](https://apify.com/architekture/youtube-transcript-scraper) · 0.0.20 · Six input recipes, a head-to-head table, n8n and Make imports and MCP setup for Claude and Cursor added to this page; output and prices unchanged.
 
-2026-10-24 · [YouTube Transcript Scraper](https://apify.com/architekture/youtube-transcript-scraper) · 0.0.16 · Listing and README now lead with a recorded 50-video bulk run and the recorded run success rate, and answer empty results, videos without captions and blocked videos up front.
+2026-10-25 · [Tennis Odds Scraper](https://apify.com/architekture/tennis-odds-scraper) · 0.1.4 · Kambi's occasional HTTP 410 refusal of one proxy address is now retried on a new address before the book is reported as blocked.
 
-2026-10-24 · [Google Hotels Scraper](https://apify.com/architekture/google-hotels-scraper) · 0.1.15 · README now answers blocked runs, stay dates, per-day calendars, filters and booking links up front; hero line from the 2026-10-24 canary run.
+2026-10-25 · [Tennis Scraper](https://apify.com/architekture/tennis-data-scraper) · 0.1.56 · Six input recipes with public example tasks (WTA top 100, yesterday's ATP results, match details by ID added), a head-to-head table and MCP setup for Claude and Cursor added to this page; output and prices unchanged.
 
-2026-10-24 · [Google Trends Scraper](https://apify.com/architekture/google-trends-scraper) · 0.1.26 · README answers the questions Google Trends users ask most: what happens on a block or page change, what a failed run costs, run times, keyword comparison, region coverage and integrations; the listing title now leads with interest over time, related queries and trending searches.
+2026-10-25 · [YouTube Transcript Scraper](https://apify.com/architekture/youtube-transcript-scraper) · 0.0.19 · Launch price: `transcript` $1.50 / 1,000 (was $4.00) until 2026-11-08 (UTC), then $6.00 / 1,000 as announced on 2026-10-24; `translated-transcript` unchanged at $10.00 / 1,000.
 
-2026-10-24 · [Dunnes Stores Scraper](https://apify.com/architekture/dunnes-ie-scraper) · 0.0.212 · A search, category or product stopped as `BLOCKED` now saves the site's last response (redacted) in the run's key-value store so the cause can be checked; pricing, input and output are unchanged.
+2026-10-25 · [Yelp Scraper](https://apify.com/architekture/yelp-scraper) · 0.1.9 · Launch price: businesses $2.50 / 1,000 (was $4.00) until 2026-11-24, then back to $4.00 / 1,000; reviews unchanged at $2.50 / 1,000.
 <!-- releases:end -->
 
 ## Contact
