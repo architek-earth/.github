@@ -59,7 +59,7 @@ Every live actor is a ready-to-paste MCP server entry in [**mcp**](https://githu
 
 | Actor | What you get | Price |
 |---|---|---|
-| [YouTube Transcript Scraper](https://apify.com/architekture/youtube-transcript-scraper) | YouTube transcripts in bulk from youtube.com: full text, timestamped caption segments, subtitles in any caption language, auto-generated… | $4.00 / 1,000 · Transcript |
+| [YouTube Transcript Scraper](https://apify.com/architekture/youtube-transcript-scraper) | YouTube transcripts in bulk from youtube.com: full text, timestamped caption segments, subtitles in any caption language, auto-generated… | $6.00 / 1,000 · Transcript |
 | [Unified Video Transcript API](https://apify.com/architekture/unified-transcript-api) | YouTube and TikTok video transcripts from youtube.com and tiktok.com in one JSON schema: transcript text, language, title, author,… | $1.00 / 1,000 · Transcript |
 | [Threads Replies Scraper](https://apify.com/architekture/threads-replies-scraper) | Threads replies scraper, global, threads.com: reply and comment rows with author handle, name and verified badge, text, like, reply,… | $2.50 / 1,000 · Reply |
 | [Substack Scraper](https://apify.com/architekture/substack-scraper) | Substack newsletter scraper (substack.com and custom domains): posts, authors, likes, comment counts, restacks, word counts, tags,… | $1.00 / 1,000 · Post |
